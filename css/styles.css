@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+
+
+  /* 
+  Use display: flex; to create a flex container.
+Use justify-content to define the horizontal alignment of items.
+Use align-items to define the vertical alignment of items.
+Use flex-direction if you need columns instead of rows.
+Use the row-reverse or column-reverse values to flip item order.
+Use order to customize the order of individual elements.
+Use align-self to vertically align individual items.
+Use flex to create flexible boxes that can stretch and shrink.
+  
+  */
+  
+  .menu-container {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    background-color:  #5995DA;  /* Blue */
+    padding: 20px 0;
+  }
+  
+  .menu {
+    border: 1px solid #fff;
+  width: 1000px;
+   display: flex;
+  justify-content: space-around;
+  }
+
+  .links {
+    /* border: 1px solid #fff;  For debugging */
+    display: flex;
+    justify-content: flex-end;
+    gap: 28px;
+  }
+  
+  .login {
+    margin-left: 10px;
+  }
+
+  /* align items */
+  
+  .header-container {
+    color: #5995DA;
+    background-color: #D6E9FE;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header {
+    width: 900px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+  }
+
+  .social,
+.subscribe {
+    /* Align them individually! 
+    This is where the align-self property comes in. 
+    Adding this to a flex item overrides the align-items value from its container: */
+
+  align-self: flex-end;
+  margin-bottom: 20px;
+
+}
+
+
+
+/* flex wrap */
+.photo-grid-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.photo-grid{
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* flex direction */
+    flex-direction: row;  /* Update this */
+    align-items: center;
+    
+}
+
+/* order */
+
+.first-item {
+    order: 1;
+  }
+  
+  .last-item {
+    order: -1;
+  }
+
+.photo-grid-item {
+    border: 1px solid #fff;
+    width: 300px;
+    height: 300px;
+  }
+  
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* flexible items */
+
+  .footer-item {
+    border: 1px solid #fff;
+    background-color: #D6E9FE;
+    height: 200px;
+    flex: 1;
+  }
+
+  /* .footer-three {
+    flex: 2;
+    background-color: #5995DA;
+  } */
+
+  .footer-one,
+.footer-three {
+  background-color: #5995DA;
+  flex: initial;
+  width: 300px;
+}
